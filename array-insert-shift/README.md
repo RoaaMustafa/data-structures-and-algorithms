@@ -1,2 +1,2 @@
 ## array-insert-shift
-![image]()
+![image](array-insert-shift.jpg)
