@@ -5,7 +5,7 @@ Write a function which takes in 2 parameters: a sorted list and the search key. 
 
 
 ## Whiteboard Process
-![image](binary_search/BinarySearch.jpg)
+![image](BinarySearch.jpg)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
