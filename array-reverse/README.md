@@ -1,2 +1,2 @@
 ## array-reverse
-![array-reverse-image](array-reverse.jpg)
+![array-reverse-image](array-reversed.jpg)
