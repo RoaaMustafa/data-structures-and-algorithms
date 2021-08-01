@@ -91,4 +91,4 @@ if __name__ == "__main__":
   ll.insert(5)
   ll.insert(7)
   ll.append(3)
-  print(ll.includes(7))
+

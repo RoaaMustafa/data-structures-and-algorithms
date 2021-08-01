@@ -91,3 +91,4 @@ def test_add_after_last():
     new_linked.insert(33)
     new_linked.insert_after(3,10)
     assert new_linked.includes(10)
+
