@@ -19,6 +19,42 @@ class LinkedList():
       node.next = self.head
     self.head = node
 
+  def append(self,value):
+      current_node=Node(value)
+      last_node=self.head
+      while current_node:
+          if last_node.next==current_node:
+           break
+      last_node=last_node.next
+
+  def insert_after(self,old_value,new_value):
+    new_node=Node(new_value)
+    current=self.head
+    temporary=self.head
+    while current.next!=None:
+      if current.new_value==old_value:
+        temporary=temporary.next
+        current.next=new_node
+        current=current.next
+        current.next=temporary
+        return
+      current=current.next
+      temporary=temporary.next
+    self.append(new_value)
+
+
+  def insert_before(self,value,new_value):
+    node=Node(new_value)
+    current=self.head
+    temporary=self.head
+    if current.value==value:
+      self.insert(new_value)
+      return
+    while(current.next.new_value!= value):
+      current=current.next
+    temporary = current.next
+    current.next=node
+    node.next = temporary
 
   def includes(self,vlaue):
      current=self.head
@@ -54,4 +90,5 @@ if __name__ == "__main__":
   ll.insert(2)
   ll.insert(5)
   ll.insert(7)
-  print(ll.includes(7))
+  ll.append(3)
+
