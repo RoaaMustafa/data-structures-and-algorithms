@@ -19,8 +19,8 @@ def test_attributes_in_node():
   actual = node.next
   assert True
 
-def test_linkedlist():
-   assert LinkedList()
+# def test_linkedlist():
+#    assert LinkedList()
 
 def test_insert():
 
@@ -57,14 +57,15 @@ def test_insert_on_last_list():
     new_linked.append(15)
     new_linked.append(26)
 
-def test_insert_to_middle():
+
+def test_add_to_middle():
     new_linked= LinkedList()
-    new_linked.insert(5)
-    new_linked.insert(15)
-    new_linked.insert(45)
-    new_linked.insert(666)
-    new_linked.insert_before(7,17)
-    assert new_linked.includes(17)
+    new_linked.insert(1)
+    new_linked.insert(3)
+    new_linked.insert(20)
+    new_linked.insert(111)
+    new_linked.insert_before(20,30)
+    assert new_linked.includes(30)
 
 
 def test_insert_befor_the_first():
@@ -75,6 +76,8 @@ def test_insert_befor_the_first():
     new_linked.insert(114)
     new_linked.insert_before(114,14)
     assert new_linked.includes(14)
+
+
 def test_add_after_middle():
     new_linked= LinkedList()
     new_linked.insert(1)
@@ -83,6 +86,8 @@ def test_add_after_middle():
     new_linked.insert(114)
     new_linked.insert_after(114,30)
     assert new_linked.includes(30)
+
+
 def test_add_after_last():
     new_linked= LinkedList()
     new_linked.insert(4)
@@ -91,4 +96,17 @@ def test_add_after_last():
     new_linked.insert(33)
     new_linked.insert_after(3,10)
     assert new_linked.includes(10)
+
+def test_out_of_range():
+    new_linked=LinkedList()
+    new_linked.kthFromEnd(0)=="out of the range"
+    new_linked.append(5)
+    new_linked.append(6)
+    new_linked.append(7)
+    new_linked.append(8)
+    actual=new_linked.kthFromEnd(6)
+    excpect="out of the range"
+    assert new_linked.kthFromEnd(0) == 8
+    assert new_linked.kthFromEnd(1) == 7
+    assert new_linked.kthFromEnd(10) == "out of the range"
 

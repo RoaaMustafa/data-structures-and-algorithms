@@ -1,4 +1,4 @@
- class Node:
+class Node:
   def __init__(self, value=""):
     self.value = value
     self.next = None
@@ -20,41 +20,43 @@ class LinkedList():
     self.head = node
 
   def append(self,value):
-      current_node=Node(value)
-      last_node=self.head
-      while current_node:
-          if last_node.next==current_node:
-           break
-      last_node=last_node.next
+      node=Node(value)
+      current=self.head
+      if current==None:
+          self.insert(value)
+          return
+      while current.next!=None:
+          current=current.next
+      current.next=node
 
-  def insert_after(self,old_value,new_value):
-    new_node=Node(new_value)
+  def insert_after(self,old_value,value):
+    node=Node(value)
     current=self.head
-    temporary=self.head
+    temp=self.head
     while current.next!=None:
-      if current.new_value==old_value:
-        temporary=temporary.next
-        current.next=new_node
+      if current.value==old_value:
+        temp=temp.next
+        current.next=node
         current=current.next
-        current.next=temporary
+        current.next=temp
         return
       current=current.next
-      temporary=temporary.next
-    self.append(new_value)
+      temp=temp.next
+    self.append(value)
 
 
-  def insert_before(self,value,new_value):
-    node=Node(new_value)
+  def insert_before(self,old_value,value):
+    node=Node(value)
     current=self.head
-    temporary=self.head
-    if current.value==value:
-      self.insert(new_value)
+    temp=self.head
+    if current.value==old_value:
+      self.insert(value)
       return
-    while(current.next.new_value!= value):
+    while(current.next.value!= old_value):
       current=current.next
-    temporary = current.next
+    temp = current.next
     current.next=node
-    node.next = temporary
+    node.next = temp
 
   def includes(self,vlaue):
      current=self.head
@@ -80,6 +82,25 @@ class LinkedList():
       yield current.value
       current = current.next
 
+  def __len__(self):
+    counter = 0
+    current = self.head
+    while current:
+      counter += 1
+      current = current.next
+    return counter
+
+  def kthFromEnd(self,num):
+      num1=len(self)-1
+      if num1<num:
+          return ("out of the range")
+      num_of_loop=(len(self)-num)-1
+      current=self.head
+      while num_of_loop >0 :
+          current=current.next
+          num_of_loop -=1
+      return current.value
+
 
 
   def __repr__(self):
@@ -91,4 +112,7 @@ if __name__ == "__main__":
   ll.insert(5)
   ll.insert(7)
   ll.append(3)
+  ll.insert_after(7,8)
+  ll.insert_before(7,6)
+  ll.kthFromEnd(3)
 
