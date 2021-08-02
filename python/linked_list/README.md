@@ -15,3 +15,9 @@ adds a new node with the given new value immediately before the first node that 
 ####  insert after function
 arguments: value, new value
 adds a new node with the given new value immediately after the first node that has the value specified
+
+# linked-list-kth
+to create a function take a number as an argument and search about node that have the index of this number start from the tail of linked list
+
+## Whiteboard Process
+ ![linked-list-kth](assets/linked-list-find-key.jpg)
