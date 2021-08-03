@@ -64,7 +64,7 @@ insert_after function : this function will add new value after spicific place
 to create a function take a number as an argument and search about node that have the index of this number start from the tail of linked list
 
 ## Whiteboard Process
- ![linked-list-kth](assets/linked-list-find-key.jpg)
+ ![linked-list-kth](assets/kth.jpg)
 
 ### pproach & Efficiency
 for search about node's value from an specified key I used a function that the complexity of time O(n) and space O(1)
