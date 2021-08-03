@@ -1,7 +1,17 @@
 ## Linked List Implementation
 ### Auther :Roaa
 
+
+ # Singly Linked List
+ Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+
+## Challenge
+initiate a linked list and inseris nodes in linked list
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 ### Overview: Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Create a Linked List class and create function that check value if included in node .
+
 
 # Singly Linked List
 ### Short summary
@@ -28,15 +38,23 @@ includes function : which take any value as an argument and Return T/F if value 
 str function : which dose not take an arguments and returns a string representing all the value in the Linked List.
 
 ### for linked list insertions
-#### append function
+# append function
 arguments: new value
 adds a new node with the given value to the end of the list
-#### insert before function
+## Whiteboard Process
+![append](assets/append_new.jpg)
+# insert before function
 arguments: value, new value
 adds a new node with the given new value immediately before the first node that has the value specified
-####  insert after function
+## Whiteboard Process
+![before](assets/insert-before_new.jpg)
+# insert after function
 arguments: value, new value
 adds a new node with the given new value immediately after the first node that has the value specified
+
+## Whiteboard Process
+![after](assets/insert_after_new.jpg)
+
 
 ### pproach & Efficiency
 
@@ -45,7 +63,6 @@ append function : which takes any value as an argument and add the new node with
 insert_before function : this function will add new value befor spicific place
 
 insert_after function : this function will add new value after spicific place
-
 
 # linked-list-kth
 to create a function take a number as an argument and search about node that have the index of this number start from the tail of linked list
