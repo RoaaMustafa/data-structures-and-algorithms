@@ -68,3 +68,43 @@ to create a function take a number as an argument and search about node that hav
 
 ### pproach & Efficiency
 for search about node's value from an specified key I used a function that the complexity of time O(n) and space O(1)
+
+# linked-list-zip
+## Challenge Summary
+Write a function called zipLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped,the new linked list with insertion of values of the two linked list first head from llone the insert the second value from lltwo and so and retun new linked list with all values of the two linked lists.list.
+
+
+## Whiteboard Process
+![linked-lists-zip](assets/zip-linked-lists.jpg)
+
+## Approach & Efficiency
+use complexity of  time and space O(n) for this code
+## Solution
+
+```
+def zipLists(llist1, llist2):
+    current1 = llist1.head
+    current2 = llist2.head
+
+    if current1 == None or current2 == None:
+        if current1:
+            return llist1.__str__()
+        elif current2:
+            return llist2.__str__()
+        else:
+         return "Linked lists are both Empty "
+
+    zip_list = []
+    while current1 or current2:
+        if(current1):
+            zip_list+=[current1.value]
+            current1 = current1.next
+        if(current2):
+            zip_list+=[current2.value]
+            current2 = current2.next
+    insertion_values=''
+    for item in zip_list:
+      insertion_values+=f'{item}-> '
+    insertion_values+='None'
+    return insertion_values
+```

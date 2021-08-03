@@ -22,10 +22,12 @@ To run your tests
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
-| assignment      | Description                                    |
-| -------------   | -----------------------------------------------|
-|Array_revers     |[array_revers](array-reverse/README.md)         |
-|Array_index-shift|[Array_index](array-insert-shift/README.md)     |
-|binary_search    |[binary_search](binary_search/README.md)        |
-|linked_list      |[linked_list](python/linked_list/README.md)     |
-|linked_list-kth  |[linked_list-kth](lpython/linked_list/README.md)|
+| assignment           | Description                                    |
+| ---------------------| -----------------------------------------------|
+|Array_revers          |[array_revers](array-reverse/README.md)         |
+|Array_index-shift     |[Array_index](array-insert-shift/README.md)     |
+|binary_search         |[binary_search](binary_search/README.md)        |
+|linked_list           |[linked_list](python/linked_list/README.md)     |
+|linked_list-insertion |[linked_list-kth](lpython/linked_list/README.md)|
+|linked_list-kth       |[linked_list-kth](lpython/linked_list/README.md)|
+|linked_list-zip       |[linked_list-zip](lpython/linked_list/README.md)|
