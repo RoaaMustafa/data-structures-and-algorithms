@@ -1,30 +1,14 @@
 ## Linked List Implementation
 ### Auther :Roaa
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> b8ccb1a7a207bba1a6529856f6562fe127ac68e7
- # Singly Linked List
- Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
-
-## Challenge
-initiate a linked list and inseris nodes in linked list
-
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-<<<<<<< HEAD
-=======
-### Overview: Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Create a Linked List class and create function that check value if included in node .
->>>>>>> 9d69a58072076c1517ec9bca6f7207c0261c1509
-=======
 ### Overview: Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Create a Linked List class and create function that check value if included in node .
 
->>>>>>> b8ccb1a7a207bba1a6529856f6562fe127ac68e7
 
 # Singly Linked List
-### Short summary
+initiate a linked list and inseris nodes in linked list
+## pproach & Efficiency
+
 + The linked list is alternative to an array-based structure.
 + A linked list is collection of nodes that collectively form linear sequence.
 + In a singly linked list, each node stores a reference to an object that is an element of the sequence, as    well as a reference to the next node of the list.
@@ -40,7 +24,6 @@ initiate a linked list and inseris nodes in linked list
 ### pproach & Efficiency
 **API**
 
-
 insert function : which take any value as an argument and adds a node of a value to the head of LL with an O(1) Time performance.
 
 includes function : which take any value as an argument and Return T/F if value is in the linked list or not
@@ -52,7 +35,7 @@ str function : which dose not take an arguments and returns a string representin
 arguments: new value
 adds a new node with the given value to the end of the list
 ## Whiteboard Process
-![append](assets/append_new.jpg)
+![append](assets/append.jpg)
 # insert before function
 arguments: value, new value
 adds a new node with the given new value immediately before the first node that has the value specified
@@ -61,17 +44,13 @@ adds a new node with the given new value immediately before the first node that 
 # insert after function
 arguments: value, new value
 adds a new node with the given new value immediately after the first node that has the value specified
-<<<<<<< HEAD
-<<<<<<< HEAD
-## Whiteboard Process
-![after](assets/insert_after_new.jpg)
-=======
-=======
 
 ## Whiteboard Process
 ![after](assets/insert_after_new.jpg)
 
->>>>>>> b8ccb1a7a207bba1a6529856f6562fe127ac68e7
+## Whiteboard Process
+![after](assets/insert_after_new.jpg)
+
 
 ### pproach & Efficiency
 
@@ -81,14 +60,11 @@ insert_before function : this function will add new value befor spicific place
 
 insert_after function : this function will add new value after spicific place
 
-<<<<<<< HEAD
-
->>>>>>> 9d69a58072076c1517ec9bca6f7207c0261c1509
-=======
->>>>>>> b8ccb1a7a207bba1a6529856f6562fe127ac68e7
 # linked-list-kth
 to create a function take a number as an argument and search about node that have the index of this number start from the tail of linked list
 
 ## Whiteboard Process
  ![linked-list-kth](assets/linked-list-find-key.jpg)
 
+### pproach & Efficiency
+for search about node's value from an specified key I used a function that the complexity of time O(n) and space O(1)
