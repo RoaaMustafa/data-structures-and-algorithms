@@ -126,11 +126,11 @@ def zipLists(llist1, llist2):
         if(current2):
             zip_list+=[current2.value]
             current2 = current2.next
-    inital=''
+    insertion_values=''
     for item in zip_list:
-      inital+=f'{item}-> '
-    inital+='None'
-    return inital
+      insertion_values+=f'{item}-> '
+    insertion_values+='None'
+    return insertion_values
 
 
 
