@@ -128,19 +128,19 @@ def zipLists(llist1, llist2):
             current2 = current2.next
     inital=''
     for item in zip_list:
-      inital+=f'( {item} ) -> '
+      inital+=f'{item}-> '
     inital+='None'
     return inital
 
 
 
 if __name__ == "__main__":
-  ll = LinkedList()
-  ll.insert(1)
-  ll.insert(2)
-  ll.insert(5)
-  ll.insert(7)
-  ll.append(3)
+#   ll = LinkedList()
+#   ll.insert(1)
+#   ll.insert(2)
+#   ll.insert(5)
+#   ll.insert(7)
+#   ll.append(3)
   # ll.insert_after(7,8)
   # ll.insert_before(7,6)
   llist1 = LinkedList()
@@ -154,6 +154,3 @@ if __name__ == "__main__":
   print(llist1.__str__())
   print(llist2.__str__())
   print(zipLists(llist1,llist2).__str__())
-
-
-
