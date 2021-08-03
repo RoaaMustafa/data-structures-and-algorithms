@@ -37,6 +37,7 @@ adds a new node with the given new value immediately before the first node that 
 ####  insert after function
 arguments: value, new value
 adds a new node with the given new value immediately after the first node that has the value specified
+
 ### pproach & Efficiency
 
 append function : which takes any value as an argument and add the new node with that value to the end of the list with an O(n) Time performance.
@@ -44,3 +45,11 @@ append function : which takes any value as an argument and add the new node with
 insert_before function : this function will add new value befor spicific place
 
 insert_after function : this function will add new value after spicific place
+
+
+# linked-list-kth
+to create a function take a number as an argument and search about node that have the index of this number start from the tail of linked list
+
+## Whiteboard Process
+ ![linked-list-kth](assets/linked-list-find-key.jpg)
+
