@@ -2,6 +2,10 @@
 ### Auther :Roaa
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> b8ccb1a7a207bba1a6529856f6562fe127ac68e7
  # Singly Linked List
  Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
 
@@ -10,9 +14,14 @@ initiate a linked list and inseris nodes in linked list
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+<<<<<<< HEAD
 =======
 ### Overview: Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Create a Linked List class and create function that check value if included in node .
 >>>>>>> 9d69a58072076c1517ec9bca6f7207c0261c1509
+=======
+### Overview: Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Create a Linked List class and create function that check value if included in node .
+
+>>>>>>> b8ccb1a7a207bba1a6529856f6562fe127ac68e7
 
 # Singly Linked List
 ### Short summary
@@ -53,9 +62,16 @@ adds a new node with the given new value immediately before the first node that 
 arguments: value, new value
 adds a new node with the given new value immediately after the first node that has the value specified
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Whiteboard Process
 ![after](assets/insert_after_new.jpg)
 =======
+=======
+
+## Whiteboard Process
+![after](assets/insert_after_new.jpg)
+
+>>>>>>> b8ccb1a7a207bba1a6529856f6562fe127ac68e7
 
 ### pproach & Efficiency
 
@@ -65,8 +81,11 @@ insert_before function : this function will add new value befor spicific place
 
 insert_after function : this function will add new value after spicific place
 
+<<<<<<< HEAD
 
 >>>>>>> 9d69a58072076c1517ec9bca6f7207c0261c1509
+=======
+>>>>>>> b8ccb1a7a207bba1a6529856f6562fe127ac68e7
 # linked-list-kth
 to create a function take a number as an argument and search about node that have the index of this number start from the tail of linked list
 
