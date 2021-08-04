@@ -106,6 +106,18 @@ class LinkedList():
   def __repr__(self):
     return "LinkedList()"
 
+  def reverse(self):
+      pass
+      prev=None
+      current =self.head
+      while(current is not None):
+          next=current.next
+          current.next=prev
+          prev=current
+          current=next
+      self.head=prev
+
+
 def zipLists(llist1, llist2):
     current1 = llist1.head
     current2 = llist2.head
@@ -135,22 +147,26 @@ def zipLists(llist1, llist2):
 
 
 if __name__ == "__main__":
-#   ll = LinkedList()
-#   ll.insert(1)
-#   ll.insert(2)
-#   ll.insert(5)
+  ll = LinkedList()
+  ll.insert(1)
+  ll.insert(2)
+  ll.insert(5)
+  print(ll)
+  ll.reverse()
+  print(ll)
+
 #   ll.insert(7)
 #   ll.append(3)
   # ll.insert_after(7,8)
   # ll.insert_before(7,6)
-  llist1 = LinkedList()
-  llist1.append(1)
-  llist1.append(3)
-  llist1.append(5)
-  llist2 = LinkedList()
-  llist2.append(2)
-  llist2.append(4)
-  llist2.append(6)
-  print(llist1.__str__())
-  print(llist2.__str__())
-  print(zipLists(llist1,llist2).__str__())
+#   llist1 = LinkedList()
+#   llist1.append(1)
+#   llist1.append(3)
+#   llist1.append(5)
+#   llist2 = LinkedList()
+#   llist2.append(2)
+#   llist2.append(4)
+#   llist2.append(6)
+#   print(llist1.__str__())
+#   print(llist2.__str__())
+#   print(zipLists(llist1,llist2).__str__())
