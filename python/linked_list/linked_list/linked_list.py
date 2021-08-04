@@ -103,19 +103,77 @@ class LinkedList():
           current=current.next
           num_of_loop -=1
       return current.value
+
   def __repr__(self):
     return "LinkedList()"
 
-  def reverse(self):
-      pass
-      prev=None
-      current =self.head
-      while(current is not None):
-          next=current.next
-          current.next=prev
-          prev=current
-          current=next
-      self.head=prev
+
+
+  def reverse(self, second_half):
+
+        prev = None
+        current = second_half
+        next = None
+
+        while current != None:
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+
+        second_half = prev
+        return second_half
+
+  def compareLists(self, head1, head2):
+
+        temp1 = head1
+        temp2 = head2
+
+        while (temp1 and temp2):
+            if (temp1.value == temp2.value):
+                temp1 = temp1.next
+                temp2 = temp2.next
+            else:
+                return 0
+
+  def isPalindrome(self,head):
+    slow_ptr =head
+    fast_ptr = head
+    prev_of_slow_ptr = head
+
+    midnode =None
+    res =True
+    if(head!=None and head.next !=None):
+        while (fast_ptr != None and
+            fast_ptr.next != None):
+            fast_ptr = fast_ptr.next.next
+            prev_of_slow_ptr = slow_ptr
+            slow_ptr = slow_ptr.next
+        if (fast_ptr != None):
+            midnode = slow_ptr
+            slow_ptr = slow_ptr.next
+        second_half = slow_ptr
+        prev_of_slow_ptr.next = None
+        second_half = self.reverse(second_half)
+        res = self.compareLists(head, second_half)
+        second_half = self.reverse(second_half)
+        if (midnode != None):
+            prev_of_slow_ptr.next = midnode
+            midnode.next = second_half
+        else:
+             prev_of_slow_ptr.next = second_half
+    return res
+
+#   def reverse(self):
+#       pass
+#       prev=None
+#       current =self.head
+#       while(current is not None):
+#           next=current.next
+#           current.next=prev
+#           prev=current
+#           current=next
+#       self.head=prev
 
 
 def zipLists(llist1, llist2):
@@ -147,13 +205,13 @@ def zipLists(llist1, llist2):
 
 
 if __name__ == "__main__":
-  ll = LinkedList()
-  ll.insert(1)
-  ll.insert(2)
-  ll.insert(5)
-  print(ll)
-  ll.reverse()
-  print(ll)
+#   ll = LinkedList()
+#   ll.insert(1)
+#   ll.insert(2)
+#   ll.insert(5)
+#   print(ll)
+#   ll.reverse()
+#   print(ll)
 
 #   ll.insert(7)
 #   ll.append(3)
@@ -170,3 +228,14 @@ if __name__ == "__main__":
 #   print(llist1.__str__())
 #   print(llist2.__str__())
 #   print(zipLists(llist1,llist2).__str__())
+    l = LinkedList()
+    s = [ 'a', 'b', 'a', 'c', 'a', 'b', 'a' ]
+
+    for i in range(len(s)):
+        l.append(s[i])
+        if (l.isPalindrome(l.head) != False):
+            print("True")
+        else:
+            print("False")
+        print()
+
