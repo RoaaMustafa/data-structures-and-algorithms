@@ -75,10 +75,10 @@ Write a function called zipLists which takes two linked lists as arguments. Zip 
 
 
 ## Whiteboard Process
-![linked-lists-zip](assets/zip-linked-lists.jpg)
+![linked-lists-zip](assets/zip-list-new.jpg)
 
 ## Approach & Efficiency
-use complexity of  time and space O(n) for this code
+use complexity of  time 0(n) and space O(1) for this code
 ## Solution
 
 ```
