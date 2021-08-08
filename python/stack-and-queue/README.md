@@ -57,3 +57,35 @@ Should raise exception when called on empty stack
 **is empty:**
 Arguments: none
 Returns: Boolean indicating whether or not the queue is empty
+
+# Stack-queue-pseudo
+
+## Whiteboard Process
+![Stack-queue-pseudo](assets/stack-queue-pseudo.jpg)
+
+## Approach & Efficiency
+
++ creating a class called PseudoQueue
++ it will use  two stacks as an input, to create a proper front and rear to the Queue.
++ use the complixity of time O(1) and space O(1) for Enqueue
++ use the complixity of time O(n) and space O(n) for Dequeue
+
+## Solution
+
+```
+class Pseudo_queue:
+    def __init__(self):
+
+        self.push_stack=Stack()
+        self.pop_stack=Stack()
+
+    def enqueue(self,value):
+        self.push_stack.push(value)
+
+
+    def dequeue(self):
+         if self.pop_stack.is_empty():
+            while self.push_stack.top != None:
+                self.pop_stack.push(self.push_stack.pop())
+         return (self.pop_stack.pop())
+```
