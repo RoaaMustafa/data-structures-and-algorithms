@@ -1,7 +1,7 @@
 
 import pytest
 from stack_and_queue import __version__
-from stack_and_queue.stack_and_queue import Stack,Queue,Node
+from stack_and_queue import Stack,Queue,Node,PseudoQueue
 
 
 def test_version():
@@ -108,4 +108,16 @@ def test_is_empty_for_peek_and_pop_queueu():
     with pytest.raises(Exception, match="empty equeue"):
          test.peek()
          test.dequeue()
+
+def test_pseudoqueue_dequeue(data):
+    assert data.dequeue() == 20
+    assert data.dequeue() == 15
+    assert data.dequeue() == 10
+    assert data.dequeue() == 5
+
+def test_pseudoqueue_enqueue(data):
+  assert data.push_stack.top.value==5
+  assert data.push_stack.top.next.value==20
+  assert data.push_stack.top.next.next.value==15
+  assert data.push_stack.top.next.next.next.value==10
 
