@@ -81,14 +81,17 @@ class Queue:
             self.dequeue()
         return counter
 
-test=Queue()
+
+
+
+# test=Queue()
 # test.enqueue(3)
 # test.push(2)
 # test.push(1)
 # test.e()
 # test.dequeue()
 
-print(test.__len__())
+# print(test.__len__())
 # test=Stack()
 # test.push(1)
 # test.push(2)
