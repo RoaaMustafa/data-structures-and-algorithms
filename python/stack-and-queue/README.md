@@ -89,3 +89,48 @@ class Pseudo_queue:
                 self.pop_stack.push(self.push_stack.pop())
          return (self.pop_stack.pop())
 ```
+## stack-queue-animal-shelter
+# Challenge Summary
+create a class called Animal Shelter which holds only one dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement enqueue method that take arguments :Animal can be either a dog or a cat object.
+Implement dequeue method that take arguments pref can be either dog or cat
+
+## Whiteboard Process
+![stack-queue-animal-shelter](assets/stack-queue-animal-shelter.jpg)
+
+## Approach & Efficiency
+I used enqueue dequeue approach The complixity fot the space O(1) and time O(1)
+
+## Solution
+```
+class AnimalShelter:
+  def __init__(self) :
+      self.cat=Queue()
+      self.dog=Queue()
+
+  def enqueue(self,animal):
+      if animal=='cat' :
+        self.cat.enqueue(animal)
+
+      elif animal=='dog' :
+        self.dog.enqueue(animal)
+
+      else :
+        return 'The animal is not in the list'
+
+
+  def dequeue(self,animal):
+    if animal =='cat' and self.cat.front:
+      return self.cat.dequeue()
+
+
+    if animal =='dog'  and self.dog.front:
+       return self.dog.dequeue()
+
+    if animal =='dog' or animal =='cat':
+        return 'The animal not there'
+    else :
+      return 'The animal not in the shelf for ignore it'
+
+
+```

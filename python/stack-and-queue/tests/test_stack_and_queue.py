@@ -3,6 +3,7 @@ import pytest
 from stack_and_queue import __version__
 from stack_and_queue.stack_and_queue import Stack,Node,Queue
 from stack_and_queue.stack_queue_pseudo import Pseudo_queue
+from stack_and_queue.stack_queue_animal_shelter import *
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -131,3 +132,38 @@ def data():
     queue.enqueue(20)
     queue.enqueue(5)
     return queue
+
+
+
+
+# //////////////////////////
+
+
+def test_Animal_Shelter_dequeue(data):
+    assert data.dequeue('cat') == 'cat'
+    assert data.dequeue('cat') == 'cat'
+    assert data.dequeue('dog') == 'dog'
+    assert data.dequeue('dog') == 'dog'
+    assert data.dequeue('dog') == 'The animal not there'
+    assert data.dequeue('cat') == 'The animal not there'
+    assert data.dequeue('bird') == 'The animal not in the shelf for ignore it'
+
+def test_Animal_Shelter_enqueue(data):
+    assert data.cat.front.value=='cat'
+    assert data.cat.front.next.value=='cat'
+    assert data.dog.front.value=='dog'
+    assert data.dog.front.next.value=='dog'
+    assert data.enqueue('hh')=='The animal is not in the list'
+
+
+
+
+
+@pytest.fixture
+def data():
+    my_queue = AnimalShelter()
+    my_queue.enqueue('cat')
+    my_queue.enqueue('cat')
+    my_queue.enqueue('dog')
+    my_queue.enqueue('dog')
+    return my_queue
