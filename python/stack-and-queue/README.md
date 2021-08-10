@@ -134,3 +134,37 @@ class AnimalShelter:
 
 
 ```
+## Multi-bracket Validation.
+# Challenge Summary
+write a function called validate brackets takes astring as an argument and return boolean
+and check representing weather or not the brackets in the string are balanced
+
+## Whiteboard Process
+![Multi-bracket Validation.](assets/Multi-bracket Validation (2).jpg)
+
+## Approach & Efficiency
+complixity of time O(n) space O(1)
+
+## Solution
+```
+def validatee_brackets(string):
+    open_listt = ["[","{","("]
+    close_listt = ["]","}",")"]
+    stack = []
+    for item in string:
+        if item in open_listt:
+            stack.append(item)
+        elif item in close_listt:
+            poss = close_listt.index(item)
+            if ((len(stack) > 0) and
+                (open_listt[poss] == stack[len(stack)-1])):
+                print(open_listt[poss] )
+                print(stack[len(stack)-1])
+                stack.pop()
+            else:
+                return False
+    if len(stack) == 0:
+        return True
+    else:
+        return False
+```
