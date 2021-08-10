@@ -4,6 +4,7 @@ from stack_and_queue import __version__
 from stack_and_queue.stack_and_queue import Stack,Node,Queue
 from stack_and_queue.stack_queue_pseudo import Pseudo_queue
 from stack_and_queue.stack_queue_animal_shelter import *
+from stack_and_queue.stack_queue_brackets import *
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -167,3 +168,33 @@ def data():
     my_queue.enqueue('dog')
     my_queue.enqueue('dog')
     return my_queue
+# ///////////////////////////////////////////////
+def test_validate_one_open_bracket():
+    test="("
+    expected=False
+    actual=validatee_brackets(test)
+    assert expected==actual
+
+def test_validate_one_close_bracket():
+    test=")"
+    expected=False
+    actual=validatee_brackets(test)
+    assert expected==actual
+
+def test_validate_one_open_And_one_close_bracket():
+    test="()"
+    expected=True
+    actual=validatee_brackets(test)
+    assert expected==actual
+
+def test_validate_multiple_brackets():
+    test="[(){}[]]"
+    expected=True
+    actual=validatee_brackets(test)
+    assert expected==actual
+
+def test_validate_multiple_brackets_with_String():
+    test="hjk[(hkj){hkj}[hjk]hjbk]"
+    expected=True
+    actual=validatee_brackets(test)
+    assert expected==actual
