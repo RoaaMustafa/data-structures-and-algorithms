@@ -1,131 +1,121 @@
 class Node:
-   def __init__(self,value):
-      self.value= value
-      self.left=None
-      self.right=None
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
 
 class BinaryTree:
     def __init__(self):
-        self.root=None
+        self.root = None
+        self.arr = []
 
-    # def pre_order(self,root):
-    #    output = []
-    #     #  print(f"OUTPUT <-- {root.value}")
-    #    try:
-    #     if not self.root:
-    #      return output
-    #     if root.left is not None:
-    #       pre_order(root.left)
+    def pre_order(self, root):
+        try:
+            self.arr.append(root.value)
+            if root.left != None:
+                self.pre_order(root.left)
 
-    #     if root.right is not None:
-    #      pre_order(root.right)
-    #    except:
-    #         raise Exception("Error with insertion by pre_order")
+            if root.right != None:
+                self.pre_order(root.right)
+            return self.arr
+        except:
+            raise Exception("Error  with pre_order ")
 
-    # def in_order(self ,root):
-    #     output = []
-    #     try:
-    #      if not self.root:
-    #       return output
-    #      if root.left is not None:
-    #       in_order(root.left)
-
-    #      output.append(root.value)
-
-    #      if root.right is not None:
-    #       in_order(root.right)
-    #     except:
-    #      raise Exception("Error with insertion by in_order")
-
-    # def post_order(self,root):
-    #     output = []
-    #     try:
-    #       if not self.root:
-    #        return output
-    #       if root.left is not None:
-    #        post_order(root.left)
-
-    #       if root.right is not None:
-    #        post_order(root.right)
-
-    #       output.append(root.value)
-    #     except:
-    #      raise Exception("Error with insertion by post_order")
-    def in_order(self, node=None, results=None):
-        node = node or self.root
-        results = results or []
-        if node:
-            if node.left:
-                self.in_order(node.left, results)
-            results.append(node.value)
-            if node.right:
-                self.in_order(node.right, results)
-        return results
-
-    def pre_order(self, node=None, results=None):
-        node = node or self.root
-        results = results or []
-        if node:
-            results.append(node.value)
-            if node.left:
-                self.pre_order(node.left, results)
-            if node.right:
-                self.pre_order(node.right, results)
-        return results
-
-    def post_order(self, node=None, results=None):
-        node = node or self.root
-        results = results or []
-        if node:
-            if node.left:
-                self.post_order(node.left, results)
-            if node.right:
-                self.post_order(node.right, results)
-            results.append(node.value)
-        return results
-
-
-class BinarySearchTree(BinaryTree):
-    def add(self, value, root=None):
-        root = root or self.root
-        node = Node(value)
-        if not self.root:
-            self.root = node
-            return
-        if value < root.value:
+    def in_order(self, root):
+        try:
             if root.left:
-                self.add(value, root.left)
-            else:
-                root.left = node
-        else:
+                self.in_order(root.left)
+
+            self.arr.append(root.value)
+
             if root.right:
-                self.add(value, root.left)
+                self.in_order(root.right)
+
+            return self.arr
+        except:
+            raise Exception("Error  with in_order")
+
+    def test(self):
+        self.arr = []
+
+    def post_order(self, root):
+        try:
+            if root.left:
+                self.post_order(root.left)
+
+            if root.right:
+                self.post_order(root.right)
+
+            self.arr.append(root.value)
+            return self.arr
+        except:
+            raise Exception("Error  with post_order")
+
+
+
+class BinarySearch(BinaryTree):
+
+    def add(self, value):
+
+        if not self.root:
+            self.root = Node(value)
+            # print(self.root.value)
+            return
+
+        current = self.root
+
+        while current:
+            if value > current.value:
+                if current.right:
+                    current = current.right
+                else:
+                    current.right = Node(value)
+
+                    return
+
             else:
-                root.right = node
+                if current.left:
+                    current = current.left
+                else:
+                    current.left = Node(value)
+                    return
 
-    def contains(self, value, current=None):
-        current = current or self.root
-        if not self.root or value == None:
-            print('no')
-            return False
-        if current.value == value:
-            print('yes')
+    def Contains(self, value):
+
+        if not self.root:
+            raise Exception("empty is tree")
+        elif value == self.root.value:
             return True
-        elif current.value < value:
-            return self.contains(value, current.left)
         else:
-            return self.contains(value, current.right)
-        print('no')
-        return False
+            current = self.root
+            while current:
 
+                if current.value < value:
 
-my_search=BinaryTree()
-root=Node("A")
-root.left=Node("B")
-root.right=Node("C")
-root.left.left=Node("D")
-root.left.right=Node("E")
-root.right.left=Node("F")
-print(root)
+                    if current.right:
+                        current = current.right
+                        if value == current.value:
+                            return True
+                    else:
+                        return False
+
+                else:
+
+                    if current.left:
+                        current = current.left
+                        if value == current.value:
+                            return True
+                    else:
+                        return False
+
+# my_search=BinaryTree()
+# my_search.root=Node("A")
+# my_search.left=Node("B")
+# my_search.right=Node("C")
+# my_search.left.left=Node("D")
+# my_search.left.right=Node("E")
+# my_search.right.left=Node("F")
+# print(my_search)
 
 
