@@ -52,6 +52,22 @@ class BinaryTree:
         except:
             raise Exception("Error  with post_order")
 
+    def tree_max(self):
+     try :
+      if self.root:
+       temp_value=self.in_order(self.root)
+       self.max=0
+
+       for num in temp_value :
+        if num>self.max:
+            self.max=num
+       return self.max
+      else:
+        return ("Error ,there is no Root in the tree")
+     except:
+         raise Exception("Error ,there is no Root in the tree")
+        # return None
+
 
 
 class BinarySearch(BinaryTree):
@@ -109,13 +125,14 @@ class BinarySearch(BinaryTree):
                     else:
                         return False
 
-# my_search=BinaryTree()
-# my_search.root=Node("A")
-# my_search.left=Node("B")
-# my_search.right=Node("C")
-# my_search.left.left=Node("D")
-# my_search.left.right=Node("E")
-# my_search.right.left=Node("F")
-# print(my_search)
+my_search=BinaryTree()
+my_search.root=Node(2)
+my_search.root.left=Node(16)
+my_search.root.right=Node(7)
+my_search.root.left.left=Node(19)
+my_search.root.left.right=Node(40)
+my_search.root.right.left=Node(5)
+print(my_search.root)
+print(f"The Max number is :{my_search.tree_max()}")
 
 

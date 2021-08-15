@@ -31,3 +31,6 @@ to build Binary_Tree class Define a method for each of the depth first traversal
 + **post order**: method that return tree in order < left=> right=> node >
 + **Add**: to add a value to a tree by binary search algorithm
 + **Contains**: to check if the tree contains a value
+
+
+#
