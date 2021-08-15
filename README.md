@@ -31,3 +31,5 @@ To run your tests
 |linked_list-insertion |[linked_list-kth](lpython/linked_list/README.md)|
 |linked_list-kth       |[linked_list-kth](lpython/linked_list/README.md)|
 |linked_list-zip       |[linked_list-zip](lpython/linked_list/README.md)|
+|Trees                 |[Trees](python/trees/README.md)                 |
+|max-tree              |[max-tree](python/trees/README.md)              |

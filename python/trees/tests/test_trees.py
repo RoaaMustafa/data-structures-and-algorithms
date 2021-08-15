@@ -102,3 +102,28 @@ def test_Contains_method():
     assert x.Contains(5) == True
     assert x.Contains(6) == True
     assert x.Contains(3) == False
+
+def test_find_max():
+  tree = BinaryTree()
+  tree.root = Node(5)
+  tree.root.left = Node(19)
+  tree.root.right = Node(7)
+  tree.root.left.left = Node(23)
+  tree.root.left.right = Node(8)
+
+  assert tree.tree_max() == 23
+
+def test_find_max_root_is_max():
+  tree = BinaryTree()
+  tree.root = Node(23)
+  tree.root.left = Node(19)
+  tree.root.right = Node(7)
+  tree.root.left.left = Node(5)
+  tree.root.left.right = Node(8)
+
+  assert tree.tree_max() == 23
+
+
+def test_find_max_root_no_root():
+  tree = BinaryTree()
+  assert tree.tree_max() == "Error ,there is no Root in the tree"
