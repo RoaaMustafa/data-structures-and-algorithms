@@ -127,3 +127,18 @@ def test_find_max_root_is_max():
 def test_find_max_root_no_root():
   tree = BinaryTree()
   assert tree.tree_max() == "Error ,there is no Root in the tree"
+
+
+
+def test_breadthFirst(data):
+    test=BinaryTree()
+    actual=test.breadthFirst(data)
+    expected=['A', 'B', 'C', 'D', 'E', 'F']
+    assert actual==expected
+
+def test_empty_breadthfirst():
+    root=""
+    test=BinaryTree()
+    with pytest.raises(Exception,match="Empty Tree"):
+     actual=test.breadthFirst(root)
+     assert actual
