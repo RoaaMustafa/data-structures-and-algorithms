@@ -65,18 +65,21 @@ def tree_max(self):
      except:
          raise Exception("Error ,there is no Root in the tree")
 ```
+<!-- ////////////////////////////////////////////////////////////////////// -->
 # Breadth First
 
 Write a function called breadth first that accept the root of the tree and return the values in array
 
 ## Whiteboard Process
-![Breadth First](x.jpg)
+
+![Breadth First](whiteboards/tree-breadth-first.jpg)
 
 ## Approach & Efficiency
 
-I used the queue data struction to implement the breadthFirst order as it shown in the Solution
+I used the queue data structure to implement the breadthFirst order as it shown in the Solution bellow and the  Time Complixity for it O(n) the space Complixity is O (1)
 
 ## Solution
+
 ```
  def breadthFirst():
 
