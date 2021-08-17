@@ -33,3 +33,4 @@ To run your tests
 |linked_list-zip       |[linked_list-zip](lpython/linked_list/README.md)|
 |Trees                 |[Trees](python/trees/README.md)                 |
 |max-tree              |[max-tree](python/trees/README.md)              |
+|Fizz_Buzz_tree        |[Fizz_Buzz_tree ](python/trees/README.md)       |
