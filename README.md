@@ -35,3 +35,4 @@ To run your tests
 |max-tree              |[max-tree](python/trees/README.md)               |
 |Fizz_Buzz_tree        |[Fizz_Buzz_tree](python/trees/README.md)         |
 |Insertion sort        |[Insertion-sort](python/insertion-sort/README.md)|
+|Merge sort            |[Merge-sort](python/merge-sort/README.md)        |
