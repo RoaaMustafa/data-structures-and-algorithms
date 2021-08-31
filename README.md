@@ -36,3 +36,4 @@ To run your tests
 |Fizz_Buzz_tree        |[Fizz_Buzz_tree](python/trees/README.md)         |
 |Insertion sort        |[Insertion-sort](python/insertion-sort/README.md)|
 |Merge sort            |[Merge-sort](python/merge-sort/README.md)        |
+|quick_sort            |[quick_sort](python/quick_sort/README.md)        |
