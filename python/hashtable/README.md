@@ -34,3 +34,4 @@ contains: Returns a boolean, indicating if the key exists in the table already.
 
 hash: Returns the Index in the collection for that key
 
+## PR: https://github.com/RoaaMustafa/data-structures-and-algorithms/pull/53
