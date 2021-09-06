@@ -1,5 +1,4 @@
 from trees import __version__
-import pytest
 from trees.binary_tree import *
 
 
