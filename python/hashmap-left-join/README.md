@@ -32,4 +32,4 @@ Space O(n)
 
 ## Solution
 
-![left_join_whiteboard](left_join_whiteboard.jpg)
+![left_join_whiteboard](left_join.jpg)

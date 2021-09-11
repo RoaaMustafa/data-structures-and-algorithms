@@ -1,4 +1,4 @@
-from hashmap_left_join.hashtable import *
+from hashmap_left_join.hashtable import HashTable
 
 def hashmap_left_join(hash1,hash2):
     '''
@@ -9,21 +9,37 @@ def hashmap_left_join(hash1,hash2):
     Arguments: hash1, hash2
     Returns: List - that LEFT JOINs two hashmaps into a single data structure.
     '''
-
-
-    buckets=hash1.get_buckets()
-    arr=[]
-    for i in buckets:
+    lj_output = []
+    for i in ht1.array:
         if i:
-            current=i.head
-            while current:
-                x=hash2.find(current.value[0])
-                if not x:
-                    x='Null'
-                current.value.append(x)
-                arr.append(current.value)
-                current=current.next
-    return arr
+            lj = []
+            current_value = i.head
+            while current_value:
+                lj.append(current_value.value[0])
+                lj.append(current_value.value[1])
+                if ht2.contains(current_value.value[0]):
+                    lj.append(ht2.get(current_value.value[0]))
+                else:
+                    lj.append(None)
+                current_value = current_value.next
+
+            lj_output.append(lj)
+    return lj_output
+
+
+    # buckets=hash1.get_buckets()
+    # arr=[]
+    # for i in buckets:
+    #     if i:
+    #         current=i.head
+    #         while current:
+    #             x=hash2.find(current.value[0])
+    #             if not x:
+    #                 x='Null'
+    #             current.value.append(x)
+    #             arr.append(current.value)
+    #             current=current.next
+    # return arr
 
 
 if __name__ == "__main__":
