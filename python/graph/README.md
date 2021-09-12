@@ -34,3 +34,8 @@ Takes in a given node
 Include the weight of the connection in the returned collection
 
 + Size(): Returns the total number of nodes in the graph
+
+## Graph Breadth First
+
+[link](graph-breadth-first.md)
+
