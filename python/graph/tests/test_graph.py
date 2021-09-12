@@ -97,6 +97,7 @@ def test_empty_graph():
 
 
     assert graph.get_nodes()==None
+
 # Breadth_First_Traversal Return the Visted value
 
 def test_breadth_first_Triversal(date):
