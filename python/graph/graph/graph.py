@@ -118,6 +118,7 @@ class Graph:
 
 
 
+
   def _breadthFirst(self, action=lambda x: print(x)):
 
     """
@@ -150,8 +151,8 @@ class Graph:
                 visited.append(edge.vertex.value)
                 breadth.enqueue(edge.vertex)
 
-    return visited
 
+    return visited
 
 
 
@@ -204,6 +205,7 @@ if __name__ == '__main__':
 
     graph.add_edges(ver,ver)
 
+
     graph.add_edges(ver,ver3)
     graph.add_edges(ver,ver4)
 
@@ -219,5 +221,7 @@ if __name__ == '__main__':
 
     # graph._depthFirst(test)
 
+
     print(graph._breadthFirst())
+
 
